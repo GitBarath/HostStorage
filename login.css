@@ -1,0 +1,179 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Georgia', serif; /* Classic font for a royal touch */
+    background: linear-gradient(135deg, #6a1b9a, #9c27b0, #c2185b); /* Rich royal gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #f8f9fa;
+  }
+  
+  /* Container styling */
+  .container-lg {
+    background: rgba(0, 0, 0, 0.8); /* Dark background to contrast with bright text */
+    color: #fff;
+    border-radius: 25px;
+    padding: 50px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    backdrop-filter: blur(15px); /* Frosted glass effect */
+    border: 2px solid #d4af37; /* Golden border */
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  /* Hover effect on container */
+  .container-lg:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6); /* Enhanced lift effect */
+  }
+  
+  /* Header and Title */
+  h1 {
+    font-size: 38px;
+    color: #d4af37; /* Gold color for a royal look */
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #d4af37, #c2185b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Shadow for extra depth */
+  }
+  
+  /* Form label styling */
+  label {
+    font-size: 16px;
+    color: #f1f1f1;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    opacity: 0.8;
+    letter-spacing: 1px;
+  }
+  
+  /* Input Fields Styling */
+  input.form-control {
+    background-color: #2c3e50;
+    color: #fff;
+    border: 2px solid #d4af37; /* Golden borders for inputs */
+    padding: 14px 18px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  input.form-control:focus {
+    border-color: #9c27b0; /* Purple focus for a royal feel */
+    outline: none;
+    box-shadow: 0 0 15px rgba(156, 39, 176, 0.7); /* Purple glow effect on focus */
+  }
+  
+  /* Submit Button Styling */
+  input[type="submit"] {
+    background: linear-gradient(135deg, #d4af37, #c2185b); /* Gold to purple gradient */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Royal shadow */
+  }
+  
+  input[type="submit"]:hover {
+    background: linear-gradient(135deg, #c2185b, #d4af37); /* Reversed gradient for hover */
+    transform: translateY(-5px); /* Slight hover animation */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* Enhanced hover shadow */
+  }
+  
+  input[type="submit"]:active {
+    transform: translateY(2px); /* Slight press down effect */
+  }
+  
+  /* Cancel Button Styling */
+  input[type="button"] {
+    background-color: #34495e;
+    color: #fff;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+    margin-top: 10px;
+  }
+  
+  input[type="button"]:hover {
+    background-color: #2c3e50;
+    transform: translateY(-5px); /* Slight hover effect */
+  }
+  
+  input[type="button"]:active {
+    transform: translateY(2px); /* Slight press down effect */
+  }
+  
+  /* Signup Link Styling */
+  a.btn-primary {
+    background-color: #8e44ad; /* Royal purple for sign up button */
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  a.btn-primary:hover {
+    background-color: #9b59b6;
+    transform: translateY(-5px);
+  }
+  
+  a.btn-primary:active {
+    transform: translateY(2px); /* Slight press down effect */
+  }
+  
+  /* Error Message Styling */
+  p {
+    color: #e74c3c; /* Red for error message */
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 767px) {
+    .container-lg {
+      padding: 30px;
+      max-width: 100%;
+    }
+  
+    input[type="submit"],
+    input[type="button"],
+    a.btn-primary {
+      font-size: 16px;
+    }
+  }
+  
+  
+  
