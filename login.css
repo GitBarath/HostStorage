@@ -7,26 +7,29 @@
 
 /* Base Body Styling */
 body {
-  font-family: 'Roboto', sans-serif;
-  background: #1a1a1a; /* Dark background to enhance neon colors */
-  color: #e1e1e1; /* Light gray text for contrast */
+  font-family: 'Arial', sans-serif;
+  background: #121212; /* Deep black background to highlight glowing elements */
+  color: #f2f2f2; /* Light color for text to contrast with dark background */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   overflow: hidden;
   position: relative;
+  background-image: url('https://www.example.com/tech-background.jpg'); /* Add a futuristic tech background */
+  background-size: cover;
+  background-position: center;
 }
 
-/* Glowing Background Animation (Cyberpunk Lights) */
+/* Glowing Background Animation */
 body::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 500px;
-  height: 500px;
-  background: rgba(255, 0, 255, 0.3);
+  width: 600px;
+  height: 600px;
+  background: rgba(0, 255, 255, 0.3);
   border-radius: 50%;
   animation: pulse-glow 5s ease-in-out infinite;
   transform: translate(-50%, -50%);
@@ -35,171 +38,152 @@ body::before {
 @keyframes pulse-glow {
   0% {
     transform: translate(-50%, -50%) scale(1);
-    opacity: 0.6;
+    opacity: 0.5;
   }
   50% {
-    transform: translate(-50%, -50%) scale(1.5);
-    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1.8);
+    opacity: 1;
   }
   100% {
     transform: translate(-50%, -50%) scale(1);
-    opacity: 0.6;
+    opacity: 0.5;
   }
 }
 
-/* Form Container with Neon Glow */
+/* Form Container Styling */
 .container-lg {
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-  padding: 40px 50px;
-  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.8); /* Dark background with slight transparency */
+  padding: 40px 60px;
+  border-radius: 12px;
   width: 100%;
   max-width: 480px;
   text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3); /* Cyan glowing shadow */
   position: relative;
   z-index: 1;
-  backdrop-filter: blur(8px); /* Adds depth with a blur */
-  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2), 0 15px 45px rgba(255, 0, 255, 0.3);
-  transform: translateY(-10px);
+  backdrop-filter: blur(10px); /* Glassy background effect */
+  transform: translateY(-20px);
   transition: all 0.3s ease;
 }
 
+/* Hover effect on the container */
 .container-lg:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 20px 50px rgba(0, 255, 255, 0.4), 0 25px 70px rgba(255, 0, 255, 0.4); /* Increase glow on hover */
+  transform: translateY(-25px);
+  box-shadow: 0 20px 60px rgba(0, 255, 255, 0.5); /* Increase glow on hover */
 }
 
-/* Title Styling with Neon Glitch Effect */
+/* Title Styling with Neon Glow */
 h1 {
-  font-size: 40px;
-  color: #00ffcc; /* Neon cyan for a glowing effect */
+  font-size: 36px;
+  color: #00f2ff; /* Neon cyan color */
   text-transform: uppercase;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5); /* Glowing neon effect */
+  letter-spacing: 1px;
   font-weight: 700;
-  position: relative;
-  animation: glitch 2s infinite alternate;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px rgba(0, 242, 255, 0.7), 0 0 40px rgba(0, 242, 255, 0.5);
+  animation: glitch 3s infinite alternate;
 }
 
 @keyframes glitch {
   0% {
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5);
     transform: translate(-2px, -2px);
+    text-shadow: 0 0 20px rgba(0, 242, 255, 0.7), 0 0 40px rgba(0, 242, 255, 0.5);
   }
   50% {
-    text-shadow: 0 0 15px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 0.7);
-    transform: translate(3px, 3px);
+    transform: translate(4px, 4px);
+    text-shadow: 0 0 40px rgba(0, 242, 255, 1), 0 0 80px rgba(0, 242, 255, 0.7);
   }
   100% {
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5);
     transform: translate(-2px, -2px);
+    text-shadow: 0 0 20px rgba(0, 242, 255, 0.7), 0 0 40px rgba(0, 242, 255, 0.5);
   }
 }
 
-/* Glowing Input Fields with Neon Border */
+/* Input Fields Styling */
 input.form-control {
   width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 2px solid transparent;
+  padding: 18px;
+  margin-bottom: 25px;
+  border: none;
   border-radius: 8px;
-  background: #222;
+  background: #222222; /* Dark background for the inputs */
   color: #fff;
   font-size: 16px;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4); /* Soft cyan glow */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Glowing cyan border */
+  transition: 0.3s ease;
 }
 
-/* Focused Input Fields with Intense Neon Border */
+/* Focused Input Fields */
 input.form-control:focus {
   outline: none;
-  background: #333;
-  border-color: #00ffcc;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Strong neon glow on focus */
+  background: #333333;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7); /* Strong cyan glow when focused */
+  border: 2px solid #00f2ff;
 }
 
-/* Glowing Submit Button */
-input[type="submit"] {
-  background: linear-gradient(145deg, #00bcd4, #0097a7); /* Cyan gradient */
-  color: white;
-  padding: 15px 0;
+/* Button Styles */
+input[type="submit"],
+input[type="button"],
+a.btn-primary {
+  background: linear-gradient(145deg, #00f2ff, #00d4d4); /* Neon cyan gradient */
+  color: #fff;
+  padding: 18px 0;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 18px;
   cursor: pointer;
   width: 100%;
   transition: all 0.3s ease;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.6); /* Cyan neon glow */
+  margin-bottom: 20px; /* Added spacing between buttons */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Subtle glow effect */
 }
 
-input[type="submit"]:hover {
-  background: linear-gradient(145deg, #0097a7, #00bcd4); /* Inverted cyan gradient on hover */
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Stronger neon glow on hover */
+/* Hover and Active Effects for Buttons */
+input[type="submit"]:hover,
+input[type="button"]:hover,
+a.btn-primary:hover {
+  background: linear-gradient(145deg, #00d4d4, #00f2ff);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Stronger cyan glow */
 }
 
-input[type="submit"]:active {
+input[type="submit"]:active,
+input[type="button"]:active,
+a.btn-primary:active {
   transform: translateY(3px); /* Button press effect */
 }
 
-/* Cancel Button with Glowing Red */
+/* Cancel Button with Red Glow */
 input[type="button"] {
-  background: linear-gradient(145deg, #ff4d4d, #e60000); /* Red gradient */
-  color: white;
-  padding: 15px 0;
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 20px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6); /* Red glow */
+  background: linear-gradient(145deg, #ff4d4d, #ff3333); /* Red gradient */
+  margin-top: 15px; /* Separate cancel button with margin */
 }
 
-input[type="button"]:hover {
-  background: linear-gradient(145deg, #e60000, #ff4d4d); /* Inverted red gradient on hover */
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Stronger red glow on hover */
-}
-
-input[type="button"]:active {
-  transform: translateY(3px); /* Button press effect */
-}
-
-/* Sign Up Link with Soft Glowing Effect */
+/* Sign Up Link with Purple Glow */
 a.btn-primary {
   background: linear-gradient(145deg, #9b59b6, #8e44ad); /* Purple gradient */
-  color: white;
   padding: 12px 24px;
   border-radius: 30px;
   text-decoration: none;
-  font-size: 18px;
-  display: inline-block;
-  margin-top: 20px;
-  width: 100%;
-  transition: background-color 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 0 12px rgba(155, 89, 182, 0.6); /* Purple glow */
+  margin-top: 25px;
 }
 
 a.btn-primary:hover {
   background: linear-gradient(145deg, #8e44ad, #9b59b6); /* Inverted purple gradient */
-  box-shadow: 0 0 20px rgba(155, 89, 182, 0.8); /* Stronger purple glow */
 }
 
 /* Error Message Styling */
 p {
-  color: #ff4d4d; /* Red for error */
+  color: #ff4d4d; /* Error text in red */
   font-size: 14px;
-  margin-top: 15px;
-  text-align: center;
+  margin-top: 20px;
   font-weight: bold;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 0, 0, 0.7); /* Soft shadow with red highlight */
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 0, 0, 0.7);
 }
 
 /* Responsive Design */
 @media (max-width: 767px) {
   .container-lg {
-    padding: 25px;
+    padding: 30px;
     width: 90%;
   }
 
@@ -207,5 +191,10 @@ p {
   input[type="button"],
   a.btn-primary {
     font-size: 16px;
+  }
+
+  /* Reduce the padding and margin on smaller screens */
+  input.form-control {
+    padding: 15px;
   }
 }
