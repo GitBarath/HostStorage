@@ -8,7 +8,7 @@
 /* Base Body Styling */
 body {
   font-family: 'Arial', sans-serif;
-  background: #121212; /* Deep black background to highlight glowing elements */
+  background: #121212; /* Deep black background to emphasize light elements */
   color: #f2f2f2; /* Light color for text to contrast with dark background */
   display: flex;
   justify-content: center;
@@ -16,12 +16,27 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  background-image: url('https://www.example.com/tech-background.jpg'); /* Add a futuristic tech background */
+  background-image: url('https://www.example.com/mystical-background.jpg'); /* A dark, moody background */
   background-size: cover;
   background-position: center;
 }
 
-/* Glowing Background Animation */
+/* Subtle background animation */
+@keyframes pulseBackground {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
 body::before {
   content: "";
   position: absolute;
@@ -29,39 +44,24 @@ body::before {
   left: 50%;
   width: 600px;
   height: 600px;
-  background: rgba(0, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  animation: pulse-glow 5s ease-in-out infinite;
+  animation: pulseBackground 6s infinite ease-in-out;
   transform: translate(-50%, -50%);
-}
-
-@keyframes pulse-glow {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.8);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.5;
-  }
 }
 
 /* Form Container Styling */
 .container-lg {
-  background: rgba(0, 0, 0, 0.8); /* Dark background with slight transparency */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent with a glass-like effect */
   padding: 40px 60px;
-  border-radius: 12px;
+  border-radius: 15px;
   width: 100%;
   max-width: 480px;
   text-align: center;
-  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3); /* Cyan glowing shadow */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
   position: relative;
   z-index: 1;
-  backdrop-filter: blur(10px); /* Glassy background effect */
+  backdrop-filter: blur(15px); /* Glass effect for the form */
   transform: translateY(-20px);
   transition: all 0.3s ease;
 }
@@ -69,33 +69,28 @@ body::before {
 /* Hover effect on the container */
 .container-lg:hover {
   transform: translateY(-25px);
-  box-shadow: 0 20px 60px rgba(0, 255, 255, 0.5); /* Increase glow on hover */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4); /* Increase shadow depth on hover */
 }
 
-/* Title Styling with Neon Glow */
+/* Title Styling with Fade-In Animation */
 h1 {
   font-size: 36px;
-  color: #00f2ff; /* Neon cyan color */
+  color: #ffffff; /* Soft white color for text */
   text-transform: uppercase;
-  letter-spacing: 1px;
   font-weight: 700;
   margin-bottom: 30px;
-  text-shadow: 0 0 20px rgba(0, 242, 255, 0.7), 0 0 40px rgba(0, 242, 255, 0.5);
-  animation: glitch 3s infinite alternate;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.5s; /* Fade-in effect with slight delay */
 }
 
-@keyframes glitch {
-  0% {
-    transform: translate(-2px, -2px);
-    text-shadow: 0 0 20px rgba(0, 242, 255, 0.7), 0 0 40px rgba(0, 242, 255, 0.5);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  50% {
-    transform: translate(4px, 4px);
-    text-shadow: 0 0 40px rgba(0, 242, 255, 1), 0 0 80px rgba(0, 242, 255, 0.7);
-  }
-  100% {
-    transform: translate(-2px, -2px);
-    text-shadow: 0 0 20px rgba(0, 242, 255, 0.7), 0 0 40px rgba(0, 242, 255, 0.5);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -109,23 +104,22 @@ input.form-control {
   background: #222222; /* Dark background for the inputs */
   color: #fff;
   font-size: 16px;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Glowing cyan border */
-  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Subtle glow */
+  transition: all 0.3s ease;
 }
 
 /* Focused Input Fields */
 input.form-control:focus {
   outline: none;
   background: #333333;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7); /* Strong cyan glow when focused */
-  border: 2px solid #00f2ff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Stronger glow effect when focused */
 }
 
-/* Button Styles */
+/* Button Styles with Scaling Effect */
 input[type="submit"],
 input[type="button"],
 a.btn-primary {
-  background: linear-gradient(145deg, #00f2ff, #00d4d4); /* Neon cyan gradient */
+  background: #4a90e2; /* Soft blue background */
   color: #fff;
   padding: 18px 0;
   border: none;
@@ -135,49 +129,58 @@ a.btn-primary {
   width: 100%;
   transition: all 0.3s ease;
   margin-bottom: 20px; /* Added spacing between buttons */
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Subtle glow effect */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Subtle glow effect */
 }
 
 /* Hover and Active Effects for Buttons */
 input[type="submit"]:hover,
 input[type="button"]:hover,
 a.btn-primary:hover {
-  background: linear-gradient(145deg, #00d4d4, #00f2ff);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Stronger cyan glow */
+  transform: scale(1.05); /* Slight scaling on hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Increase glow on hover */
 }
 
 input[type="submit"]:active,
 input[type="button"]:active,
 a.btn-primary:active {
-  transform: translateY(3px); /* Button press effect */
+  transform: scale(0.98); /* Button press effect with scaling */
 }
 
-/* Cancel Button with Red Glow */
+/* Cancel Button with Red Accent */
 input[type="button"] {
-  background: linear-gradient(145deg, #ff4d4d, #ff3333); /* Red gradient */
-  margin-top: 15px; /* Separate cancel button with margin */
+  background: #e74c3c; /* Soft red background for the cancel button */
+  margin-top: 15px; /* Space between the cancel button and the others */
 }
 
-/* Sign Up Link with Purple Glow */
+/* Sign Up Link with a Smooth Fade Effect */
 a.btn-primary {
-  background: linear-gradient(145deg, #9b59b6, #8e44ad); /* Purple gradient */
+  background: #8e44ad; /* Soft purple background */
   padding: 12px 24px;
   border-radius: 30px;
   text-decoration: none;
   margin-top: 25px;
+  opacity: 0;
+  animation: fadeInLink 1s forwards 1s; /* Fade-in animation with delay */
 }
 
-a.btn-primary:hover {
-  background: linear-gradient(145deg, #8e44ad, #9b59b6); /* Inverted purple gradient */
+@keyframes fadeInLink {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Error Message Styling */
 p {
-  color: #ff4d4d; /* Error text in red */
+  color: #e74c3c; /* Error text in red */
   font-size: 14px;
   margin-top: 20px;
   font-weight: bold;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 0, 0, 0.7);
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 0, 0, 0.7);
 }
 
 /* Responsive Design */
@@ -193,7 +196,7 @@ p {
     font-size: 16px;
   }
 
-  /* Reduce the padding and margin on smaller screens */
+  /* Adjust padding for input fields on smaller screens */
   input.form-control {
     padding: 15px;
   }
