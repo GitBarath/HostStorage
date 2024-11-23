@@ -1,91 +1,110 @@
-/* Reset and Basic Styles */
+/* Global Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #212121; /* Darker background for a mysterious look */
-  color: #f0f0f0; /* Light text to contrast with dark background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e2f; /* Deep, mysterious background */
+  color: #f2f2f2; /* Light grey text to contrast with dark background */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  background-image: linear-gradient(to bottom, #1e1e2f, #2a2a3c); /* Subtle gradient */
 }
 
+/* Form Container */
 .container-lg {
-  background-color: #333; /* Dark background for the container */
+  background-color: #2c2f3f; /* Dark blue-gray for a cool, mysterious vibe */
   border-radius: 15px;
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3); /* Subtle deep shadow for a classy feel */
-  padding: 40px 50px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Deep shadow for depth */
+  padding: 40px 60px;
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
   transition: all 0.3s ease;
+  transform: translateY(0);
+  position: relative;
 }
 
-/* Hover effect for the form container */
 .container-lg:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4); /* More intense shadow on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4); /* Deep hover effect */
 }
 
-/* Header styling */
+/* Header Styling */
 h1 {
-  font-size: 40px;
+  font-size: 42px;
   text-align: center;
   margin-bottom: 20px;
-  color: #fff; /* Light text color for the header */
+  color: #fff;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6); /* Elegant text shadow */
+  font-family: 'Roboto', sans-serif; /* Modern font */
 }
 
 /* Label Styling */
 label {
-  font-size: 15px;
-  color: #bbb; /* Light grey label color */
+  font-size: 16px;
+  color: #bbb; /* Lighter grey for labels */
   font-weight: 500;
   margin-bottom: 8px;
   display: block;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+label:hover {
+  color: #f39c12; /* Golden hover effect */
 }
 
 /* Input Fields */
 .form-control {
-  border-radius: 10px;
-  border: 1px solid #555; /* Dark border to match the theme */
-  background-color: #444; /* Dark input background */
-  color: #f0f0f0; /* Light text in input */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 1px solid #444; /* Subtle border to blend with the dark theme */
+  background-color: #3a3f54; /* Darker background for input fields */
+  color: #f2f2f2; /* Light text */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow around inputs */
   font-size: 16px;
-  padding: 14px 20px;
-  margin-bottom: 25px;
+  padding: 14px 22px;
+  margin-bottom: 20px;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
-/* Focus state for inputs */
 .form-control:focus {
-  border-color: #7f8c8d; /* Light grayish-blue border on focus */
-  box-shadow: 0 0 8px rgba(127, 140, 141, 0.6); /* Soft focus glow */
+  border-color: #f39c12; /* Golden border on focus */
+  box-shadow: 0 0 10px rgba(243, 156, 18, 0.8); /* Soft golden glow on focus */
   outline: none;
 }
 
 /* Submit Button */
 .btn-primary {
-  background-color: #8e44ad; /* Rich purple for elegance */
+  background-color: #f39c12; /* Rich golden color for a luxurious feel */
   border: none;
   color: #fff;
   padding: 14px 20px;
   font-size: 18px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
 .btn-primary:hover {
-  background-color: #9b59b6; /* Slightly lighter purple on hover */
-  transform: translateY(-2px); /* Slight lift effect */
+  background-color: #e67e22; /* Slightly darker gold on hover */
+  transform: translateY(-2px); /* Slight lifting effect */
 }
 
 .btn-primary:active {
@@ -94,23 +113,24 @@ label {
 
 /* Cancel Button */
 .btn-secondary {
-  background-color: #e74c3c; /* Classic red for a bold cancel button */
+  background-color: #e74c3c; /* Bold red color for the cancel button */
   border: none;
   color: #fff;
   padding: 14px 20px;
   font-size: 18px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 15px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
 .btn-secondary:hover {
   background-color: #c0392b; /* Darker red on hover */
-  transform: translateY(-2px); /* Slight lift effect */
+  transform: translateY(-2px); /* Slight lifting effect */
 }
 
 .btn-secondary:active {
@@ -120,20 +140,19 @@ label {
 /* Text Styling */
 .form-text {
   font-size: 14px;
-  color: #bbb; /* Light grey text for help */
+  color: #aaa; /* Subtle help text */
   margin-top: 5px;
 }
 
-/* Error Message Styling */
 .error-message {
   color: #e74c3c;
   font-size: 14px;
   margin-top: 15px;
   text-align: center;
-  text-transform: uppercase;
+  font-weight: 600;
 }
 
-/* Responsiveness for mobile devices */
+/* Responsive Design */
 @media (max-width: 767px) {
   .container-lg {
     padding: 30px;
@@ -141,11 +160,15 @@ label {
   }
 
   h1 {
-    font-size: 32px; /* Smaller title on small screens */
+    font-size: 36px; /* Adjust header size for smaller screens */
   }
 
   .btn-primary, .btn-secondary {
-    font-size: 16px;
+    font-size: 16px; /* Slightly smaller buttons */
+  }
+
+  .form-control {
+    padding: 12px 20px; /* Adjust input padding for small screens */
   }
 }
 
@@ -158,4 +181,14 @@ label {
   font-size: 14px;
   color: #e74c3c;
   margin-top: 5px;
+}
+
+/* Focus and Hover Effects */
+input:focus, .form-control:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(243, 156, 18, 0.7); /* Soft golden glow */
+}
+
+input:hover, .form-control:hover {
+  border-color: #f39c12; /* Golden hover effect */
 }
