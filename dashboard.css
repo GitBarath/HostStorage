@@ -1,34 +1,40 @@
 /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fc; /* Light gray background */
+    color: #495057; /* Dark text for contrast */
     margin: 0;
     padding: 0;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #343a40 !important;
-    border-bottom: 2px solid #495057;
+    background-color: #343a40; /* Deep dark background */
+    border-bottom: 1px solid #e2e2e2; /* Soft divider */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 .navbar-brand {
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 1.75rem;
+    font-weight: 600;
     color: #ffffff;
+    letter-spacing: 1px;
 }
 
 .navbar-nav .nav-link {
-    color: #ffffff !important;
+    color: #e2e2e2 !important; /* Soft light text */
     font-size: 1.1rem;
+    padding: 10px 15px;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #007bff !important;
+    color: #ffffff !important;
+    background-color: #007bff; /* Highlight on hover */
+    border-radius: 5px;
 }
 
 .navbar-toggler-icon {
-    background-color: white !important;
+    background-color: #ffffff;
 }
 
 .offcanvas {
@@ -41,31 +47,30 @@ body {
 }
 
 .offcanvas-body {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
 }
 
 .offcanvas-body .nav-item .nav-link {
-    color: white;
-    font-size: 1.1rem;
+    color: #e2e2e2;
+    padding: 12px 20px;
 }
 
 .offcanvas-body .nav-item .nav-link:hover {
-    color: #007bff;
+    color: #ffffff;
 }
 
 /* Container Styles */
 .container-fluid {
-    padding: 2rem 3rem;
+    padding: 2rem 4rem;
 }
 
 /* Button Styles */
 .btn {
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
@@ -89,49 +94,53 @@ body {
     background-color: #ffc107 !important;
 }
 
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
 /* Table Styles */
 .table {
     width: 100%;
     margin-bottom: 1rem;
     background-color: transparent;
     border-radius: 8px;
-    overflow: hidden;
 }
 
 .table-dark {
-    background-color: #212529 !important;
+    background-color: #343a40 !important;
 }
 
 .table-hover tbody tr:hover {
-    background-color: #495057 !important;
+    background-color: #f1f1f1 !important;
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #343a40;
+    background-color: #f8f9fa;
 }
 
 .table td,
 .table th {
     vertical-align: middle;
     text-align: center;
-    padding: 0.8rem;
-    border: 1px solid #495057;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
 }
 
 /* Accordion Styles */
 .card {
-    margin-bottom: 1.5rem;
-    border: none;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .card-header {
     background-color: #007bff;
     color: white;
-    padding: 0.75rem;
-    font-size: 1.2rem;
+    padding: 12px;
+    font-size: 1.25rem;
+    font-weight: 600;
     border-radius: 8px 8px 0 0;
 }
 
@@ -143,16 +152,15 @@ body {
 .card-header .btn.bg-primary {
     float: right;
     background-color: #0056b3;
+    border-radius: 5px;
 }
 
 .card-body {
-    padding: 1.25rem;
-    background-color: #f8f9fa;
+    padding: 2rem;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #495057;
     border-radius: 0 0 8px 8px;
-}
-
-.container-fluidrow {
-    margin-bottom: 1.5rem;
 }
 
 /* Plotly Chart Container */
@@ -160,20 +168,21 @@ body {
 #div{{ warehouse.id }} {
     width: 100%;
     height: 350px;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 /* Custom List Styles */
 .list-group-item {
-    background-color: #343a40;
-    color: white;
+    background-color: #ffffff;
+    color: #495057;
     font-size: 1rem;
     border: none;
-    padding: 0.75rem 1rem;
+    padding: 12px 20px;
+    border-radius: 5px;
 }
 
 .list-group-item:hover {
-    background-color: #495057;
+    background-color: #f1f1f1;
 }
 
 /* Responsive Styles */
@@ -188,11 +197,11 @@ body {
 
     .btn {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
     .card-body {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .table td, .table th {
@@ -215,11 +224,6 @@ body {
         margin-left: auto;
     }
 
-    .table td,
-    .table th {
-        font-size: 0.85rem;
-    }
-
     .btn {
         width: 100%;
     }
@@ -230,22 +234,26 @@ body {
     }
 
     .card-body {
-        padding: 0.75rem;
+        padding: 1.25rem;
+    }
+
+    .table td, .table th {
+        font-size: 0.85rem;
     }
 }
 
 /* Shadow Effects */
 .shadow-lg {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 /* Hover Effects for Links */
 .nav-link:hover,
 .btn:hover {
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
-/* Add spacing for items */
+/* Elegant spacing for items */
 .mb-4 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
