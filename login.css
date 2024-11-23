@@ -7,143 +7,192 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(145deg, #111111, #3a3a3a); /* Dark, moody gradient */
-  color: #ddd; /* Light gray text for contrast */
+  background: linear-gradient(135deg, #232526, #414345); /* Dark gradient background */
+  color: #d1d1d1; /* Light gray for text contrast */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 10px;
   overflow: hidden;
+  position: relative;
 }
 
-/* Centered container with an enigmatic design */
+/* Mysterious floating effect */
+body::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: pulse 6s ease-in-out infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* Centered container with a dramatic floating effect */
 .container-lg {
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8); /* Deep shadow for a mysterious vibe */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8); /* Deep shadow */
   width: 100%;
-  max-width: 480px;
+  max-width: 500px;
   text-align: center;
-  backdrop-filter: blur(10px); /* Background blur for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(12px); /* Added blur effect for depth */
+  position: relative;
+  z-index: 1;
+  transform: rotate(2deg);
+  transition: transform 0.4s ease, box-shadow 0.3s ease, background-color 0.4s ease;
 }
 
-/* Hover effect for container */
 .container-lg:hover {
-  transform: translateY(-10px); /* Floating effect */
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9); /* Darker shadow for more mystery */
-  background: rgba(0, 0, 0, 0.75); /* Darker background on hover */
+  transform: rotate(0deg) scale(1.05); /* Slight scale and straighten on hover */
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9); /* Stronger shadow on hover */
+  background-color: rgba(0, 0, 0, 0.85); /* Darker on hover */
 }
 
-/* Title Styling */
+/* Title Styling with a glitchy, modern feel */
 h1 {
-  font-size: 30px;
-  color: #e6e6e6;
+  font-size: 36px;
+  color: #fff;
   font-weight: 700;
   margin-bottom: 30px;
-  letter-spacing: 2px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.3), 0 0 12px rgba(0, 0, 0, 0.5); /* Soft glow */
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.4), 0 0 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.6); /* Glowing text effect */
+  animation: glitch 1.5s infinite alternate;
 }
 
-/* Input Fields */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.4), 0 0 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.6);
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 0, 0, 0.7);
+    transform: translate(2px, 2px);
+  }
+  100% {
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.4), 0 0 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.6);
+    transform: translate(-2px, -2px);
+  }
+}
+
+/* Input Fields with Neon Glow */
 input.form-control {
   width: 100%;
   padding: 15px;
   margin-bottom: 20px;
-  border: 1px solid #444; /* Dark border for contrast */
-  border-radius: 8px;
-  background-color: #222; /* Dark background for inputs */
+  border: none;
+  border-radius: 10px;
+  background-color: #333; /* Dark background for inputs */
   color: #ddd;
   font-size: 16px;
   transition: 0.3s ease-in-out;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); /* Light glow around the input */
+  position: relative;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3); /* Cyan glow */
 }
 
-/* Focus effect with a purple-blue glow */
+/* Focus effect with glowing border */
 input.form-control:focus {
   outline: none;
-  border-color: #6a0dad; /* Subtle violet focus */
-  background-color: #333; /* Darker background when focused */
-  box-shadow: 0 0 8px rgba(106, 13, 173, 0.7); /* Violet glowing effect */
+  background-color: #444; /* Darker input on focus */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Stronger cyan glow */
 }
 
-/* Submit Button */
+/* Submit Button with Neon Effect */
 input[type="submit"] {
-  background-color: #6a0dad; /* Mysterious violet */
+  background: linear-gradient(145deg, #00bcd4, #0097a7); /* Cyan gradient */
   color: white;
   padding: 14px;
   border: none;
-  border-radius: 8px;
+  border-radius: 15px;
   font-size: 18px;
   cursor: pointer;
   width: 100%;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 0 12px rgba(106, 13, 173, 0.5); /* Glowing violet effect */
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5); /* Cyan glow */
 }
 
 input[type="submit"]:hover {
-  background-color: #9b59b6; /* Lighter purple on hover */
-  box-shadow: 0 0 20px rgba(106, 13, 173, 0.8); /* Stronger violet glow */
+  background: linear-gradient(145deg, #0097a7, #00bcd4); /* Inverted gradient on hover */
+  box-shadow: 0 0 30px rgba(0, 188, 212, 0.8); /* Stronger cyan glow on hover */
 }
 
 input[type="submit"]:active {
-  transform: translateY(2px); /* Button press effect */
+  transform: translateY(2px); /* Press effect */
 }
 
-/* Cancel Button */
+/* Cancel Button with Neon Red */
 input[type="button"] {
-  background-color: #c0392b; /* Dark red for cancel */
+  background: linear-gradient(145deg, #e74c3c, #c0392b); /* Deep red gradient */
   color: white;
   padding: 14px;
   border: none;
-  border-radius: 8px;
+  border-radius: 15px;
   font-size: 18px;
   cursor: pointer;
   width: 100%;
   margin-top: 15px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 0 12px rgba(244, 67, 54, 0.5); /* Red glow */
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 15px rgba(244, 67, 54, 0.5); /* Red glow */
 }
 
 input[type="button"]:hover {
-  background-color: #e74c3c; /* Lighter red on hover */
-  box-shadow: 0 0 20px rgba(244, 67, 54, 0.7); /* Stronger red glow */
+  background: linear-gradient(145deg, #c0392b, #e74c3c); /* Inverted red gradient */
+  box-shadow: 0 0 30px rgba(244, 67, 54, 0.7); /* Stronger red glow on hover */
 }
 
 input[type="button"]:active {
-  transform: translateY(2px); /* Button press effect */
+  transform: translateY(2px); /* Press effect */
 }
 
-/* Sign Up Link */
+/* Sign Up Link with Soft Glowing Effect */
 a.btn-primary {
-  background-color: #00bcd4; /* Cyan for mysterious link */
+  background: linear-gradient(145deg, #9b59b6, #8e44ad); /* Purple gradient */
   color: white;
   padding: 12px 24px;
-  border-radius: 50px;
+  border-radius: 30px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 25px;
   width: 100%;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 0 12px rgba(0, 188, 212, 0.5); /* Cyan glow */
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 15px rgba(155, 89, 182, 0.5); /* Soft purple glow */
 }
 
 a.btn-primary:hover {
-  background-color: #0097a7; /* Darker cyan on hover */
-  box-shadow: 0 0 20px rgba(0, 188, 212, 0.7); /* Stronger cyan glow */
+  background: linear-gradient(145deg, #8e44ad, #9b59b6); /* Inverted purple gradient */
+  box-shadow: 0 0 30px rgba(155, 89, 182, 0.7); /* Stronger purple glow */
 }
 
-/* Error Message Styling */
+/* Error Message with Neon Red Glow */
 p {
   color: #e74c3c; /* Red for errors */
   font-size: 14px;
   margin-top: 15px;
   text-align: center;
   font-weight: bold;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Soft shadow for error text */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Soft shadow */
 }
 
 /* Responsive Design */
