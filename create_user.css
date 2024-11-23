@@ -1,0 +1,151 @@
+/* Reset and Basic Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container-lg {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 50px;
+    width: 100%;
+    max-width: 600px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effect for the form container */
+  .container-lg:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header styling */
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Label Styling */
+  label {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Input Fields */
+  .form-control {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Focus state for inputs */
+  .form-control:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 5px rgba(78, 115, 223, 0.6);
+    outline: none;
+  }
+  
+  /* Submit Button */
+  .btn-primary {
+    background-color: #4e73df;
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2e59d9;
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .btn-primary:active {
+    transform: translateY(2px); /* Button press effect */
+  }
+  
+  /* Cancel Button */
+  .btn-secondary {
+    background-color: #e74c3c;
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .btn-secondary:active {
+    transform: translateY(2px); /* Button press effect */
+  }
+  
+  /* Text Styling */
+  .form-text {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Responsiveness for mobile devices */
+  @media (max-width: 767px) {
+    .container-lg {
+      padding: 30px;
+      max-width: 90%;
+    }
+  
+    h1 {
+      font-size: 28px;
+    }
+  
+    .btn-primary, .btn-secondary {
+      font-size: 14px;
+    }
+  }
+  
+  /* Additional Styling for Hidden Fields and Errors */
+  .hidden-field {
+    display: none;
+  }
+  
+  .error-message {
+    font-size: 14px;
+    color: #e74c3c;
+    margin-top: 5px;
+  }
+  
