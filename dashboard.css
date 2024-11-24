@@ -123,6 +123,7 @@ table tr:hover td {
     text-align: center;
     margin: 10px 15px 15px 0; /* Space between buttons */
     width: auto;
+    transition: background-color 0.3s ease;
 }
 
 .card-body .btn.bg-info {
@@ -160,6 +161,36 @@ table tr:hover td {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+}
+
+/* Buttons for New Warehouse and other buttons outside card */
+.btn-new-warehouse {
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-new-warehouse:hover {
+    background-color: #16a085;
+}
+
+/* Buttons for Home and Logout (Right side of Navbar) */
+.navbar-nav .nav-item .nav-link {
+    background-color: #16a085;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #1abc9c;
 }
 
 /* Responsive Design for Smaller Screens */
