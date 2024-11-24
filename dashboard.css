@@ -1,7 +1,7 @@
 /* General Body Styling */
 body {
-    background-color: #f5f5f5; /* Light gray background */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean font family */
+    background-color: #f5f5f5; /* Light background for the body */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean font */
     margin: 0;
     padding: 0;
 }
@@ -10,11 +10,11 @@ body {
 .navbar {
     background-color: #2d3436; /* Dark grey background */
     padding: 15px 30px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1); /* Light shadow effect */
 }
 
 .navbar-brand {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     color: #ecf0f1; /* Light color for navbar brand */
     font-weight: 700;
     letter-spacing: 1px;
@@ -22,7 +22,7 @@ body {
 
 .navbar-nav {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     align-items: center;
     margin-left: auto;
 }
@@ -40,6 +40,26 @@ body {
     color: white;
 }
 
+/* New Warehouse Button Styling */
+.btn-new-warehouse {
+    background-color: #16a085; /* Stylish teal color */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    text-align: center;
+    display: block; /* Centers the button */
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+}
+
+.btn-new-warehouse:hover {
+    background-color: #1abc9c; /* Darker teal on hover */
+}
+
 /* Table Styling */
 table {
     width: 100%;
@@ -47,7 +67,7 @@ table {
     border-collapse: collapse;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 table th,
@@ -71,7 +91,7 @@ table td {
 }
 
 table tr:nth-child(odd) td {
-    background-color: #f0f4f8; /* Slightly darker gray for odd rows */
+    background-color: #ecf0f1; /* Alternating row color */
 }
 
 table tr:hover td {
@@ -84,7 +104,7 @@ table tr:hover td {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
@@ -108,8 +128,8 @@ table tr:hover td {
     border-radius: 5px;
     text-align: center;
     margin: 12px 15px 0 0; /* Spacing between buttons */
-    width: auto;
     transition: background-color 0.3s ease;
+    width: auto;
 }
 
 .card-body .btn.bg-info {
@@ -139,32 +159,11 @@ table tr:hover td {
     background-color: #c0392b;
 }
 
-/* New Warehouse Button */
-.btn-new-warehouse {
-    background-color: #16a085;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    margin-top: 20px;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.btn-new-warehouse:hover {
-    background-color: #1abc9c;
-}
-
 /* Responsive Design for Mobile/Tablets */
 @media (max-width: 768px) {
     .navbar-nav {
         flex-direction: column; /* Stack navbar items vertically on mobile */
         gap: 15px;
-    }
-
-    .navbar-nav .nav-item {
-        margin-left: 0;
     }
 
     .card-body .btn-container {
