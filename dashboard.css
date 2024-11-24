@@ -41,6 +41,11 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Align the Home and Logout buttons in the top-right */
+.navbar-nav .nav-item:last-child {
+    margin-left: 30px; /* Adds some space between home and logout buttons */
+}
+
 .navbar-nav .nav-link:hover {
     color: #1abc9c !important; /* Teal hover effect for links */
     background-color: #ffffff;
@@ -76,7 +81,7 @@ table td {
 }
 
 table tr:nth-child(even) td {
-    background-color: #f0f8ff; /* Light blue for even rows */
+    background-color: #eaf0f1; /* Light blue for even rows */
 }
 
 table tr:nth-child(odd) td {
@@ -85,39 +90,6 @@ table tr:nth-child(odd) td {
 
 table tr:hover td {
     background-color: #bdc3c7; /* Slight hover effect */
-}
-
-table .btn {
-    margin: 5px;
-    font-size: 0.9rem;
-    padding: 8px 15px;
-}
-
-table .btn.bg-info {
-    background-color: #2980b9; /* Info button color */
-    color: white;
-}
-
-table .btn.bg-info:hover {
-    background-color: #3498db; /* Hover effect */
-}
-
-table .btn.bg-warning {
-    background-color: #f39c12; /* Warning button color */
-    color: white;
-}
-
-table .btn.bg-warning:hover {
-    background-color: #f1c40f; /* Hover effect */
-}
-
-table .btn.bg-danger {
-    background-color: #e74c3c; /* Danger button color */
-    color: white;
-}
-
-table .btn.bg-danger:hover {
-    background-color: #c0392b; /* Hover effect */
 }
 
 /* Card and Accordion Styles */
@@ -143,39 +115,62 @@ table .btn.bg-danger:hover {
     background-color: #f9f9f9;
 }
 
-.card-body a.btn {
+/* Update, Delete, and Other Buttons inside Cards */
+.card-body .btn {
     margin-right: 10px;
     font-size: 1rem;
+    padding: 8px 15px;
+    text-align: center;
 }
 
-.card-body ul {
-    list-style-type: none;
-    padding-left: 0;
+.card-body .btn.bg-info {
+    background-color: #2980b9; /* Info button color */
+    color: white;
 }
 
-.card-body ul li {
-    padding: 8px 0;
-    font-size: 1rem;
-    color: #34495e;
+.card-body .btn.bg-info:hover {
+    background-color: #3498db; /* Hover effect */
 }
 
-.card-body ul li span {
-    font-weight: bold;
+.card-body .btn.bg-warning {
+    background-color: #f39c12; /* Warning button color */
+    color: white;
 }
 
-.row.justify-content-around {
-    margin-top: 20px;
+.card-body .btn.bg-warning:hover {
+    background-color: #f1c40f; /* Hover effect */
 }
 
-.shadow-lg {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.card-body .btn.bg-danger {
+    background-color: #e74c3c; /* Danger button color */
+    color: white;
 }
 
-.bg-dark {
-    background-color: #34495e !important;
+.card-body .btn.bg-danger:hover {
+    background-color: #c0392b; /* Hover effect */
 }
 
-/* Responsive Design */
+/* Make Buttons align properly within their container */
+.card-body .btn-container {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 15px; /* Add space between the buttons */
+    margin-bottom: 20px;
+}
+
+/* Align Buttons in a Row for Smaller Screen Devices */
+@media (max-width: 768px) {
+    .card-body .btn-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-body .btn-container .btn {
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive Design for Navbar and Buttons */
 @media (max-width: 768px) {
     .navbar-nav {
         flex-direction: column; /* Stack navbar items vertically on small screens */
@@ -185,5 +180,12 @@ table .btn.bg-danger:hover {
     .navbar-nav .nav-item {
         margin-left: 0;
         margin-bottom: 10px; /* Space between buttons in vertical layout */
+    }
+
+    /* Adjust Button Sizes and Spacing for Smaller Screens */
+    table .btn {
+        width: 100%;
+        font-size: 1rem;
+        margin: 5px 0;
     }
 }
