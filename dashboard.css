@@ -1,23 +1,22 @@
-/* General Styling */
+/* General Body Styling */
 body {
-    background-color: #f0f2f5; /* Soft light background for better readability */
-    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+    background-color: #f4f5f7; /* Soft light background */
+    font-family: 'Arial', sans-serif; /* Clean font */
     margin: 0;
     padding: 0;
 }
 
 /* Navbar Styling */
 .navbar {
-    background-color: #343a40; /* Dark theme for the navbar */
-    padding: 15px 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    background-color: #343a40; /* Dark theme */
+    padding: 15px;
 }
 
 .navbar-brand {
-    font-size: 1.8rem;
-    color: #ffffff; /* Light color for the brand */
+    font-size: 1.6rem;
+    color: #ffffff; 
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .navbar-nav {
@@ -33,25 +32,30 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-    background-color: #17a2b8; /* Highlight color on hover */
-    color: white;
+    background-color: #007bff; /* Light blue on hover */
+}
+
+/* Container Styling */
+.container-fluid {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* New Warehouse Button */
 .btn-new-warehouse {
-    background-color: #007bff; /* Professional blue color */
+    background-color: #007bff;
     color: white;
     padding: 12px 30px;
     border-radius: 5px;
     font-size: 1.2rem;
-    margin: 20px auto;
-    display: block; /* Centered button */
-    width: auto;
+    display: inline-block;
+    margin-bottom: 20px;
     transition: background-color 0.3s ease;
 }
 
 .btn-new-warehouse:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3; /* Darker blue */
 }
 
 /* Table Styling */
@@ -60,7 +64,9 @@ table {
     margin-top: 30px;
     border-collapse: collapse;
     border-radius: 8px;
-    overflow: hidden; /* Rounded corners for table */
+    overflow: hidden;
+    background-color: #ffffff; /* White background for the table */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 table th,
@@ -68,58 +74,58 @@ table td {
     padding: 15px;
     text-align: center;
     font-size: 1rem;
-    color: #495057; /* Darker text for better contrast */
+    color: #495057;
 }
 
 table th {
-    background-color: #007bff; /* Matching blue header */
+    background-color: #007bff;
     color: white;
 }
 
 table td {
-    background-color: #ffffff; /* White background for data */
     border-bottom: 1px solid #ddd;
 }
 
-table tr:nth-child(odd) td {
+table tr:nth-child(odd) {
     background-color: #f8f9fa; /* Light gray for alternate rows */
 }
 
-table tr:hover td {
-    background-color: #f1f1f1; /* Light highlight on hover */
+table tr:hover {
+    background-color: #f1f1f1; /* Light hover effect */
 }
 
 /* Card Styling */
 .card {
-    margin: 30px 0;
+    margin-top: 20px;
     background-color: #ffffff;
-    border: none;
     border-radius: 8px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Card shadow */
 }
 
 .card-header {
-    background-color: #343a40; /* Dark header color */
+    background-color: #343a40;
     color: white;
+    padding: 15px;
     font-size: 1.4rem;
-    padding: 20px;
-    font-weight: 600;
+    font-weight: bold;
     border-radius: 8px 8px 0 0;
 }
 
 .card-body {
     padding: 20px;
-    background-color: #f8f9fa; /* Soft background for content */
+    background-color: #f8f9fa;
 }
 
-/* Buttons in Card */
+/* Buttons inside Card */
 .card-body .btn {
     padding: 12px 20px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     border-radius: 5px;
-    text-align: center;
-    margin: 12px 0;
     width: 48%;
+    margin-right: 4%;
+    margin-bottom: 15px;
+    text-align: center;
     display: inline-block;
     transition: background-color 0.3s ease;
 }
@@ -151,17 +157,6 @@ table tr:hover td {
     background-color: #c82333;
 }
 
-/* Container and General Layout */
-.container-fluid {
-    padding: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.table-responsive {
-    margin-top: 30px;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar-nav {
@@ -171,12 +166,12 @@ table tr:hover td {
     }
 
     .card-body .btn {
-        width: 100%; /* Full-width buttons on mobile */
+        width: 100%;
         margin-bottom: 15px;
     }
 
-    .table th,
-    .table td {
+    table th,
+    table td {
         font-size: 0.9rem;
     }
 
