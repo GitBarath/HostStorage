@@ -1,98 +1,84 @@
-/* General Body Styles */
+/* General Body Styling */
 body {
-    background-color: #f5f7fa; /* Light background for the page */
-    font-family: 'Arial', sans-serif; /* Clean, sans-serif font for the page */
+    background-color: #f5f5f5; /* Light gray background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean font family */
     margin: 0;
     padding: 0;
 }
 
 /* Navbar Styling */
 .navbar {
-    background-color: #2c3e50; /* Dark background for the navbar */
-    padding: 15px 25px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for subtle depth */
+    background-color: #2d3436; /* Dark grey background */
+    padding: 15px 30px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
 .navbar-brand {
-    font-size: 1.8rem;
-    color: #ecf0f1; /* Light color for the navbar brand */
-    font-weight: 600;
-    text-transform: uppercase;
+    font-size: 1.9rem;
+    color: #ecf0f1; /* Light color for navbar brand */
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
 .navbar-nav {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
+    margin-left: auto;
 }
 
 .navbar-nav .nav-link {
-    color: #ecf0f1 !important;
+    color: #ecf0f1;
     font-size: 1.1rem;
-    padding: 8px 15px;
-    border-radius: 4px;
+    padding: 10px 15px;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-    background-color: #34495e;
+    background-color: #2980b9; /* Hover color */
     color: white;
-}
-
-/* Right aligned Home and Logout buttons */
-.navbar-nav .nav-item {
-    margin-left: auto; /* Ensure these buttons go to the right */
-}
-
-.navbar-nav .nav-item .nav-link {
-    background-color: #1abc9c;
-    border-radius: 4px;
-    padding: 10px 20px;
-}
-
-.navbar-nav .nav-item .nav-link:hover {
-    background-color: #16a085;
 }
 
 /* Table Styling */
 table {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 25px;
     border-collapse: collapse;
-    background-color: #ffffff; /* Clean white background for the table */
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-table th, table td {
-    padding: 15px;
+table th,
+table td {
+    padding: 16px;
     text-align: center;
     font-size: 1rem;
-    color: #2c3e50; /* Dark color for text */
+    color: #34495e;
 }
 
 table th {
-    background-color: #3498db; /* Light blue for headers */
+    background-color: #2980b9; /* Table header blue */
     color: white;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
 table td {
-    background-color: #ecf0f1; /* Light gray for table rows */
+    background-color: #f4f6f9; /* Light gray background for table rows */
     border-bottom: 1px solid #ddd;
 }
 
 table tr:nth-child(odd) td {
-    background-color: #ffffff; /* White for odd rows */
+    background-color: #f0f4f8; /* Slightly darker gray for odd rows */
 }
 
 table tr:hover td {
-    background-color: #bdc3c7; /* Grayish color on hover */
+    background-color: #bdc3c7; /* Darker background on hover */
 }
 
-/* Card and Accordion Styles */
+/* Card Styling */
 .card {
     margin-bottom: 30px;
     background-color: #ffffff;
@@ -102,26 +88,26 @@ table tr:hover td {
 }
 
 .card-header {
-    background-color: #2980b9; /* Bold blue for card header */
+    background-color: #2d3436; /* Dark header color */
     color: white;
     padding: 15px;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 600;
     border-radius: 8px 8px 0 0;
 }
 
 .card-body {
     padding: 20px;
-    background-color: #f8f9fa; /* Light background for the card body */
+    background-color: #f8f9fa; /* Light background */
 }
 
-/* Buttons inside Card (Update, Delete, etc.) */
+/* Buttons inside Card */
 .card-body .btn {
     font-size: 1rem;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 5px;
     text-align: center;
-    margin: 10px 15px 15px 0; /* Space between buttons */
+    margin: 12px 15px 0 0; /* Spacing between buttons */
     width: auto;
     transition: background-color 0.3s ease;
 }
@@ -129,7 +115,6 @@ table tr:hover td {
 .card-body .btn.bg-info {
     background-color: #3498db;
     color: white;
-    border: none;
 }
 
 .card-body .btn.bg-info:hover {
@@ -139,7 +124,6 @@ table tr:hover td {
 .card-body .btn.bg-warning {
     background-color: #f39c12;
     color: white;
-    border: none;
 }
 
 .card-body .btn.bg-warning:hover {
@@ -149,55 +133,34 @@ table tr:hover td {
 .card-body .btn.bg-danger {
     background-color: #e74c3c;
     color: white;
-    border: none;
 }
 
 .card-body .btn.bg-danger:hover {
     background-color: #c0392b;
 }
 
-/* Aligning Buttons inside Card */
-.card-body .btn-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-/* Buttons for New Warehouse and other buttons outside card */
+/* New Warehouse Button */
 .btn-new-warehouse {
-    background-color: #1abc9c;
+    background-color: #16a085;
     color: white;
-    padding: 10px 25px;
-    border-radius: 8px;
+    padding: 12px 30px;
+    border-radius: 5px;
     font-size: 1.1rem;
-    margin-top: 15px;
+    margin-top: 20px;
     text-decoration: none;
     display: inline-block;
     transition: background-color 0.3s ease;
 }
 
 .btn-new-warehouse:hover {
-    background-color: #16a085;
-}
-
-/* Buttons for Home and Logout (Right side of Navbar) */
-.navbar-nav .nav-item .nav-link {
-    background-color: #16a085;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-nav .nav-item .nav-link:hover {
     background-color: #1abc9c;
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design for Mobile/Tablets */
 @media (max-width: 768px) {
     .navbar-nav {
         flex-direction: column; /* Stack navbar items vertically on mobile */
-        gap: 10px;
+        gap: 15px;
     }
 
     .navbar-nav .nav-item {
@@ -210,10 +173,10 @@ table tr:hover td {
 
     .card-body .btn {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
-    table td, table th {
+    table th, table td {
         font-size: 0.9rem;
         padding: 10px;
     }
