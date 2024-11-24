@@ -1,16 +1,16 @@
-/* Body Styles */
+/* General Body Styles */
 body {
-    background-color: #f4f6f9; /* Light background for a clean look */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ecf0f1; /* Light background for a clean, modern look */
+    font-family: 'Roboto', sans-serif; /* Clean and professional font */
     margin: 0;
     padding: 0;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: #2c3e50; /* Darker blue for the navbar */
-    padding: 18px 30px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    background-color: #1abc9c; /* Soft teal background */
+    padding: 15px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,60 +19,32 @@ body {
 .navbar-brand {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #f39c12; /* Gold color for the brand */
-    letter-spacing: 1px;
+    color: #ffffff; /* White text for the brand */
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .navbar-nav {
     display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: flex-end;  /* Align items to the right */
-    margin-left: auto; /* Push navbar items to the right */
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-nav .nav-item {
-    margin-bottom: 10px; /* Add space between the buttons */
+    margin-left: 20px; /* Space between buttons */
 }
 
 .navbar-nav .nav-link {
-    color: #ecf0f1 !important; /* Light gray text for navbar links */
-    font-size: 1.2rem;
-    padding: 12px 20px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #f39c12 !important;
-    background-color: #16a085;
-    border-radius: 5px;
-}
-
-/* Offcanvas Styles for Mobile View */
-.offcanvas {
-    background-color: #34495e;
-    color: white;
-}
-
-.offcanvas-body .nav-item .nav-link {
-    color: #ecf0f1;
-    padding: 14px 20px;
-}
-
-.offcanvas-body .nav-item .nav-link:hover {
-    background-color: #16a085;
-}
-
-/* Button Styles */
-.btn {
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
+    color: #ffffff !important; /* White text for navbar links */
+    font-size: 1.1rem;
+    padding: 10px 15px;
     transition: all 0.3s ease;
 }
 
-.btn:hover {
-    opacity: 0.8;
+.navbar-nav .nav-link:hover {
+    color: #1abc9c !important; /* Teal hover effect for links */
+    background-color: #ffffff;
+    border-radius: 5px;
 }
 
 /* Table Styles */
@@ -80,33 +52,35 @@ table {
     width: 100%;
     margin-top: 30px;
     border-collapse: collapse;
+    background-color: #ffffff; /* White table background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow around the table */
 }
 
 table th,
 table td {
-    padding: 12px;
+    padding: 12px 15px;
     text-align: center;
     font-size: 1.1rem;
 }
 
 table th {
-    background-color: #2c3e50; /* Dark header background */
-    color: #ecf0f1; /* Light text */
-    border-bottom: 2px solid #7f8c8d;
+    background-color: #16a085; /* Teal header background */
+    color: #ffffff; /* White text in headers */
+    border-bottom: 2px solid #34495e; /* Slight border for separation */
 }
 
 table td {
-    background-color: #ffffff; /* Light background for table cells */
-    color: #2c3e50; /* Dark text */
-    border-bottom: 1px solid #7f8c8d;
+    background-color: #f9f9f9; /* Light gray background for table cells */
+    color: #34495e; /* Dark text */
+    border-bottom: 1px solid #ddd;
 }
 
 table tr:nth-child(even) td {
-    background-color: #ecf0f1; /* Light grey background for even rows */
+    background-color: #f0f8ff; /* Light blue for even rows */
 }
 
 table tr:nth-child(odd) td {
-    background-color: #ffffff; /* White background for odd rows */
+    background-color: #ffffff; /* White for odd rows */
 }
 
 table tr:hover td {
@@ -146,31 +120,32 @@ table .btn.bg-danger:hover {
     background-color: #c0392b; /* Hover effect */
 }
 
-/* Accordion Styles */
+/* Card and Accordion Styles */
 .card {
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
 }
 
 .card-header {
-    background-color: #34495e;
+    background-color: #1abc9c; /* Teal background for card headers */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 5px 5px 0 0;
+    border-radius: 8px 8px 0 0;
 }
 
 .card-body {
     padding: 20px;
-    background-color: #f4f6f9;
+    background-color: #f9f9f9;
 }
 
 .card-body a.btn {
     margin-right: 10px;
+    font-size: 1rem;
 }
 
 .card-body ul {
@@ -179,7 +154,7 @@ table .btn.bg-danger:hover {
 }
 
 .card-body ul li {
-    padding: 5px 0;
+    padding: 8px 0;
     font-size: 1rem;
     color: #34495e;
 }
@@ -203,13 +178,12 @@ table .btn.bg-danger:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar-nav {
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
+        flex-direction: column; /* Stack navbar items vertically on small screens */
+        align-items: flex-end;
     }
 
     .navbar-nav .nav-item {
-        margin-left: 10px;
-        margin-bottom: 0;
+        margin-left: 0;
+        margin-bottom: 10px; /* Space between buttons in vertical layout */
     }
 }
