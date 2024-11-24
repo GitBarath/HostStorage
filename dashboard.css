@@ -1,83 +1,87 @@
 /* General Body Styles */
 body {
-    background-color: #f0f4f8; /* Light gray background for a soft, minimalistic feel */
-    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    background-color: #f5f7fa; /* Light background for the page */
+    font-family: 'Arial', sans-serif; /* Clean, sans-serif font for the page */
     margin: 0;
     padding: 0;
 }
 
-/* Navbar Styles */
+/* Navbar Styling */
 .navbar {
-    background-color: #34495e; /* Dark slate blue for the navbar */
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    background-color: #2c3e50; /* Dark background for the navbar */
+    padding: 15px 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for subtle depth */
 }
 
 .navbar-brand {
     font-size: 1.8rem;
-    color: #ecf0f1; /* Light gray for contrast */
-    font-weight: 700;
+    color: #ecf0f1; /* Light color for the navbar brand */
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .navbar-nav {
     display: flex;
+    gap: 20px;
     align-items: center;
 }
 
-.navbar-nav .nav-item {
-    margin-left: 30px;
-}
-
 .navbar-nav .nav-link {
-    color: #ecf0f1 !important; /* Light gray text */
+    color: #ecf0f1 !important;
     font-size: 1.1rem;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 8px 15px;
+    border-radius: 4px;
     transition: background-color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #34495e !important; /* Darker color on hover */
-    background-color: #ecf0f1;
+    background-color: #34495e;
+    color: white;
+}
+
+/* Right aligned Home and Logout buttons */
+.navbar-nav .nav-item {
+    margin-left: auto; /* Ensure these buttons go to the right */
+}
+
+.navbar-nav .nav-item .nav-link {
+    background-color: #1abc9c;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #16a085;
 }
 
 /* Table Styling */
 table {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
     border-collapse: collapse;
     background-color: #ffffff; /* Clean white background for the table */
-    border-radius: 8px; /* Rounded corners for the table */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-table th,
-table td {
+table th, table td {
     padding: 15px;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #2c3e50; /* Dark color for text */
 }
 
 table th {
-    background-color: #1abc9c; /* Light teal for headers */
-    color: #ffffff;
+    background-color: #3498db; /* Light blue for headers */
+    color: white;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
 table td {
-    background-color: #f5f6fa; /* Very light gray background for data rows */
+    background-color: #ecf0f1; /* Light gray for table rows */
     border-bottom: 1px solid #ddd;
-}
-
-table tr:nth-child(even) td {
-    background-color: #ecf0f1; /* Light gray for even rows */
 }
 
 table tr:nth-child(odd) td {
@@ -85,21 +89,21 @@ table tr:nth-child(odd) td {
 }
 
 table tr:hover td {
-    background-color: #bdc3c7; /* Slight hover effect */
+    background-color: #bdc3c7; /* Grayish color on hover */
 }
 
-/* Card & Accordion Styles */
+/* Card and Accordion Styles */
 .card {
     margin-bottom: 30px;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow around cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-    background-color: #2980b9; /* Bold blue background for card header */
-    color: #ffffff;
+    background-color: #2980b9; /* Bold blue for card header */
+    color: white;
     padding: 15px;
     font-size: 1.2rem;
     font-weight: bold;
@@ -108,27 +112,27 @@ table tr:hover td {
 
 .card-body {
     padding: 20px;
-    background-color: #f5f6fa; /* Light gray background for the card body */
+    background-color: #f8f9fa; /* Light background for the card body */
 }
 
-/* Update, Delete, and Other Buttons inside Cards */
+/* Buttons inside Card (Update, Delete, etc.) */
 .card-body .btn {
     font-size: 1rem;
     padding: 10px 20px;
     border-radius: 5px;
     text-align: center;
-    margin: 0 15px 15px 0; /* Right margin for proper spacing */
+    margin: 10px 15px 15px 0; /* Space between buttons */
     width: auto;
 }
 
 .card-body .btn.bg-info {
-    background-color: #2980b9;
+    background-color: #3498db;
     color: white;
     border: none;
 }
 
 .card-body .btn.bg-info:hover {
-    background-color: #3498db;
+    background-color: #2980b9;
 }
 
 .card-body .btn.bg-warning {
@@ -138,7 +142,7 @@ table tr:hover td {
 }
 
 .card-body .btn.bg-warning:hover {
-    background-color: #f1c40f;
+    background-color: #e67e22;
 }
 
 .card-body .btn.bg-danger {
@@ -151,39 +155,35 @@ table tr:hover td {
     background-color: #c0392b;
 }
 
-/* Align Buttons inside Card in a Flexible Layout */
+/* Aligning Buttons inside Card */
 .card-body .btn-container {
     display: flex;
-    justify-content: flex-start;
-    gap: 15px;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
-/* Button Alignment for Small Screens (Mobile Devices) */
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .navbar-nav {
-        flex-direction: column; /* Stack navbar items vertically */
-        align-items: flex-end;
+        flex-direction: column; /* Stack navbar items vertically on mobile */
+        gap: 10px;
     }
 
     .navbar-nav .nav-item {
         margin-left: 0;
-        margin-bottom: 10px;
     }
 
     .card-body .btn-container {
         flex-direction: column;
-        align-items: center;
     }
 
     .card-body .btn {
-        margin-bottom: 10px; /* Vertical alignment of buttons */
         width: 100%;
+        margin-bottom: 10px;
     }
 
-    table td,
-    table th {
-        font-size: 1rem;
+    table td, table th {
+        font-size: 0.9rem;
         padding: 10px;
     }
 }
