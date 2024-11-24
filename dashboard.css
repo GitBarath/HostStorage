@@ -1,30 +1,30 @@
 /* Global Styles */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #e8f0f2; /* Very light gray for clean background */
-    color: #212529; /* Dark text for contrast */
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9; /* Soft light gray for a clean background */
+    color: #34495e; /* Dark gray text for readability */
     margin: 0;
     padding: 0;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: #2c3e50; /* Deep navy-blue background */
-    border-bottom: 2px solid #dcdcdc; /* Light grey border for separation */
+    background-color: #2c3e50; /* Dark navy blue */
+    padding: 15px 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #f1c40f; /* Gold-like color for a premium feel */
-    letter-spacing: 2px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #f1c40f; /* Gold accent color */
+    letter-spacing: 1px;
 }
 
 .navbar-nav .nav-link {
     color: #ecf0f1 !important; /* Light text for links */
     font-size: 1.1rem;
-    padding: 12px 20px;
+    padding: 10px 20px;
     transition: color 0.3s ease;
 }
 
@@ -35,13 +35,10 @@ body {
 }
 
 .navbar-nav .nav-item {
-    margin-left: 15px; /* Add spacing between buttons */
+    margin-left: 15px; /* Add spacing between navbar items */
 }
 
-.navbar-toggler-icon {
-    background-color: #ecf0f1;
-}
-
+/* Navbar Offcanvas for mobile view */
 .offcanvas {
     background-color: #2c3e50;
     color: white;
@@ -49,26 +46,20 @@ body {
 
 .offcanvas-body .nav-item .nav-link {
     color: #ecf0f1;
-    padding: 15px 20px;
-    font-size: 1.2rem;
+    padding: 12px 18px;
 }
 
 .offcanvas-body .nav-item .nav-link:hover {
     background-color: #34495e;
 }
 
-/* Container Styles */
-.container-fluid {
-    padding: 3rem 5rem;
-}
-
 /* Button Styles */
 .btn {
-    font-size: 1.1rem;
-    padding: 12px 24px;
-    border-radius: 25px; /* Rounded buttons */
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 30px; /* Rounded corners for buttons */
     border: none;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -97,8 +88,9 @@ body {
     color: white;
 }
 
-.bg-light {
-    background-color: #f5f5f5 !important;
+/* Container Styles */
+.container-fluid {
+    padding: 30px 50px;
 }
 
 /* Table Styles */
@@ -117,7 +109,7 @@ body {
 
 .table-hover tbody tr:hover {
     background-color: #f1f1f1 !important;
-    color: #2c3e50;
+    color: #34495e;
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
@@ -128,15 +120,15 @@ body {
 .table th {
     vertical-align: middle;
     text-align: center;
-    padding: 14px;
+    padding: 12px;
     font-size: 1.1rem;
     border-bottom: 1px solid #dcdcdc;
-    color: #ecf0f1; /* Make sure text is visible even without hover */
+    color: #ecf0f1;
 }
 
 .table td:hover, .table th:hover {
-    background-color: #ecf0f1; /* Subtle hover effect for cells */
-    color: #2c3e50; /* Dark text on hover */
+    background-color: #ecf0f1;
+    color: #34495e;
 }
 
 /* Accordion Styles */
@@ -150,7 +142,7 @@ body {
 .card-header {
     background-color: #2980b9;
     color: #ffffff;
-    padding: 18px 24px;
+    padding: 15px 25px;
     font-size: 1.3rem;
     font-weight: 600;
     border-radius: 12px 12px 0 0;
@@ -164,11 +156,11 @@ body {
 .card-header .btn.bg-primary {
     float: right;
     background-color: #1abc9c;
-    border-radius: 25px;
+    border-radius: 30px;
 }
 
 .card-body {
-    padding: 3rem 2rem;
+    padding: 25px 20px;
     background-color: #ffffff;
     font-size: 1rem;
     color: #34495e;
@@ -216,7 +208,7 @@ body {
 /* Responsive Styles */
 @media (max-width: 991px) {
     .navbar-brand {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 
     .container-fluid {
