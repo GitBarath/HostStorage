@@ -1,87 +1,83 @@
 /* General Body Styles */
 body {
-    background-color: #ecf0f1; /* Light background for a clean, modern look */
-    font-family: 'Roboto', sans-serif; /* Clean and professional font */
+    background-color: #f0f4f8; /* Light gray background for a soft, minimalistic feel */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
     margin: 0;
     padding: 0;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: #1abc9c; /* Soft teal background */
-    padding: 15px 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    background-color: #34495e; /* Dark slate blue for the navbar */
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 .navbar-brand {
     font-size: 1.8rem;
-    font-weight: 600;
-    color: #ffffff; /* White text for the brand */
+    color: #ecf0f1; /* Light gray for contrast */
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .navbar-nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
 .navbar-nav .nav-item {
-    margin-left: 20px; /* Space between buttons */
+    margin-left: 30px;
 }
 
 .navbar-nav .nav-link {
-    color: #ffffff !important; /* White text for navbar links */
+    color: #ecf0f1 !important; /* Light gray text */
     font-size: 1.1rem;
     padding: 10px 15px;
-    transition: all 0.3s ease;
-}
-
-/* Align the Home and Logout buttons in the top-right */
-.navbar-nav .nav-item:last-child {
-    margin-left: 30px; /* Adds some space between home and logout buttons */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #1abc9c !important; /* Teal hover effect for links */
-    background-color: #ffffff;
-    border-radius: 5px;
+    color: #34495e !important; /* Darker color on hover */
+    background-color: #ecf0f1;
 }
 
-/* Table Styles */
+/* Table Styling */
 table {
     width: 100%;
     margin-top: 30px;
     border-collapse: collapse;
-    background-color: #ffffff; /* White table background */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow around the table */
+    background-color: #ffffff; /* Clean white background for the table */
+    border-radius: 8px; /* Rounded corners for the table */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 table th,
 table td {
-    padding: 12px 15px;
+    padding: 15px;
     text-align: center;
     font-size: 1.1rem;
+    color: #2c3e50; /* Dark color for text */
 }
 
 table th {
-    background-color: #16a085; /* Teal header background */
-    color: #ffffff; /* White text in headers */
-    border-bottom: 2px solid #34495e; /* Slight border for separation */
+    background-color: #1abc9c; /* Light teal for headers */
+    color: #ffffff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 table td {
-    background-color: #f9f9f9; /* Light gray background for table cells */
-    color: #34495e; /* Dark text */
+    background-color: #f5f6fa; /* Very light gray background for data rows */
     border-bottom: 1px solid #ddd;
 }
 
 table tr:nth-child(even) td {
-    background-color: #eaf0f1; /* Light blue for even rows */
+    background-color: #ecf0f1; /* Light gray for even rows */
 }
 
 table tr:nth-child(odd) td {
@@ -92,19 +88,19 @@ table tr:hover td {
     background-color: #bdc3c7; /* Slight hover effect */
 }
 
-/* Card and Accordion Styles */
+/* Card & Accordion Styles */
 .card {
     margin-bottom: 30px;
-    border-radius: 8px;
     background-color: #ffffff;
     border: 1px solid #ddd;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow around cards */
 }
 
 .card-header {
-    background-color: #1abc9c; /* Teal background for card headers */
-    color: white;
-    padding: 12px 20px;
+    background-color: #2980b9; /* Bold blue background for card header */
+    color: #ffffff;
+    padding: 15px;
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 8px 8px 0 0;
@@ -112,80 +108,82 @@ table tr:hover td {
 
 .card-body {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #f5f6fa; /* Light gray background for the card body */
 }
 
 /* Update, Delete, and Other Buttons inside Cards */
 .card-body .btn {
-    margin-right: 10px;
     font-size: 1rem;
-    padding: 8px 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
     text-align: center;
+    margin: 0 15px 15px 0; /* Right margin for proper spacing */
+    width: auto;
 }
 
 .card-body .btn.bg-info {
-    background-color: #2980b9; /* Info button color */
+    background-color: #2980b9;
     color: white;
+    border: none;
 }
 
 .card-body .btn.bg-info:hover {
-    background-color: #3498db; /* Hover effect */
+    background-color: #3498db;
 }
 
 .card-body .btn.bg-warning {
-    background-color: #f39c12; /* Warning button color */
+    background-color: #f39c12;
     color: white;
+    border: none;
 }
 
 .card-body .btn.bg-warning:hover {
-    background-color: #f1c40f; /* Hover effect */
+    background-color: #f1c40f;
 }
 
 .card-body .btn.bg-danger {
-    background-color: #e74c3c; /* Danger button color */
+    background-color: #e74c3c;
     color: white;
+    border: none;
 }
 
 .card-body .btn.bg-danger:hover {
-    background-color: #c0392b; /* Hover effect */
+    background-color: #c0392b;
 }
 
-/* Make Buttons align properly within their container */
+/* Align Buttons inside Card in a Flexible Layout */
 .card-body .btn-container {
     display: flex;
-    justify-content: flex-start; /* Align buttons to the left */
-    gap: 15px; /* Add space between the buttons */
-    margin-bottom: 20px;
+    justify-content: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-/* Align Buttons in a Row for Smaller Screen Devices */
-@media (max-width: 768px) {
-    .card-body .btn-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card-body .btn-container .btn {
-        margin-bottom: 10px;
-    }
-}
-
-/* Responsive Design for Navbar and Buttons */
+/* Button Alignment for Small Screens (Mobile Devices) */
 @media (max-width: 768px) {
     .navbar-nav {
-        flex-direction: column; /* Stack navbar items vertically on small screens */
+        flex-direction: column; /* Stack navbar items vertically */
         align-items: flex-end;
     }
 
     .navbar-nav .nav-item {
         margin-left: 0;
-        margin-bottom: 10px; /* Space between buttons in vertical layout */
+        margin-bottom: 10px;
     }
 
-    /* Adjust Button Sizes and Spacing for Smaller Screens */
-    table .btn {
+    .card-body .btn-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-body .btn {
+        margin-bottom: 10px; /* Vertical alignment of buttons */
         width: 100%;
+    }
+
+    table td,
+    table th {
         font-size: 1rem;
-        margin: 5px 0;
+        padding: 10px;
     }
 }
