@@ -43,7 +43,7 @@ body {
 }
 
 /* New Warehouse Button */
-.btn-new-warehouse {
+.btn bg-info {
     padding: 12px 20px;
     font-size: 1rem;
     border-radius: 5px;
@@ -55,7 +55,7 @@ body {
     transition: background-color 0.3s ease;;
 }
 
-.btn-new-warehouse:hover {
+.btn bg-info:hover {
     background-color: #0056b3; /* Darker blue */
 }
 
