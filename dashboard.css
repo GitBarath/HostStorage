@@ -40,6 +40,50 @@ body {
   color: #ffffff;
 }
 
+/* Button Styling for Home and Logout */
+.navbar-nav .nav-item .nav-link {
+  padding: 12px 20px;
+  margin-left: 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  opacity: 0.8;
+}
+
+/* Home Button Custom Color and Spacing */
+.navbar-nav .nav-item .nav-link.home-button {
+  background-color: #007bff; /* Blue color */
+  color: white;
+}
+
+.navbar-nav .nav-item .nav-link.home-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Log Out Button Custom Color and Spacing */
+.navbar-nav .nav-item .nav-link.logout-button {
+  background-color: #dc3545; /* Red color for logout */
+  color: white;
+}
+
+.navbar-nav .nav-item .nav-link.logout-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Adding extra spacing around the navbar items */
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px;
+}
+
 /* Table Styling */
 table {
   width: 100%;
