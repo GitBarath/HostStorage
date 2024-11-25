@@ -1,182 +1,220 @@
-/* General Body Styling */
+/* General Styles */
 body {
-    background-color: #f4f5f7; /* Soft light background */
-    font-family: 'Arial', sans-serif; /* Clean font */
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
     margin: 0;
     padding: 0;
 }
 
-/* Navbar Styling */
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container-fluidrow {
+    margin-bottom: 20px;
+}
+
+h1, h5 {
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 1.25rem;
+}
+
 .navbar {
-    background-color: #343a40; /* Dark theme */
-    padding: 15px;
+    margin-bottom: 20px;
 }
 
 .navbar-brand {
-    font-size: 1.6rem;
-    color: #ffffff; 
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 1.75rem;
 }
 
-.navbar-nav {
-    margin-left: auto;
-}
-
-.navbar-nav .nav-link {
-    color: #ffffff;
-    font-size: 1.1rem;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    background-color: #007bff; /* Light blue on hover */
-}
-
-/* Container Styling */
-.container-fluid {
-    padding: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* New Warehouse Button */
-.btn bg-info {
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    width: 48%;
-    margin-right: 4%;
-    margin-bottom: 15px;
-    text-align: center;
-    display: inline-block;
-    transition: background-color 0.3s ease;;
-}
-
-.btn bg-info:hover {
-    background-color: #0056b3; /* Darker blue */
-}
-
-/* Table Styling */
-table {
-    width: 100%;
-    margin-top: 30px;
-    border-collapse: collapse;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #ffffff; /* White background for the table */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-}
-
-table th,
-table td {
-    padding: 15px;
-    text-align: center;
-    font-size: 1rem;
-    color: #495057;
-}
-
-table th {
-    background-color: #007bff;
+/* Navbar Styles */
+.navbar-dark .navbar-nav .nav-link.active {
+    background-color: #17a2b8;
     color: white;
 }
 
-table td {
-    border-bottom: 1px solid #ddd;
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
 }
 
-table tr:nth-child(odd) {
-    background-color: #f8f9fa; /* Light gray for alternate rows */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #17a2b8;
 }
 
-table tr:hover {
-    background-color: #f1f1f1; /* Light hover effect */
+.offcanvas-body {
+    padding: 15px;
 }
 
-/* Card Styling */
+.offcanvas-header h5 {
+    font-size: 1.25rem;
+}
+
+.offcanvas-title {
+    font-size: 1.5rem;
+}
+
+/* Button Styles */
+.btn {
+    font-size: 1rem;
+    margin: 5px;
+}
+
+.bg-info {
+    background-color: #17a2b8 !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.bg-primary {
+    background-color: #007bff !important;
+}
+
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.table-responsive-lg {
+    overflow-x: auto;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+}
+
+.table-dark {
+    background-color: #343a40;
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+.table-dark tbody tr:hover {
+    background-color: #495057;
+}
+
+/* Accordion Styles */
 .card {
-    margin-top: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Card shadow */
+    border: none;
+    margin-bottom: 15px;
 }
 
 .card-header {
     background-color: #343a40;
     color: white;
-    padding: 15px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    border-radius: 8px 8px 0 0;
+    padding: 10px;
 }
 
 .card-body {
-    padding: 20px;
     background-color: #f8f9fa;
 }
 
-/* Buttons inside Card */
-.card-body .btn {
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    width: 48%;
-    margin-right: 4%;
+.card-header .btn {
+    cursor: pointer;
+}
+
+.card-body .container-fluid {
+    padding: 20px;
+}
+
+.card-body ul.list-group {
+    padding-left: 0;
+}
+
+/* Custom Container Alignments */
+.container-fluidrow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-fluidrow .col {
     margin-bottom: 15px;
+}
+
+.container-fluidrow .col-lg-7,
+.container-fluidrow .col-lg-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#accordion .card {
+    margin-bottom: 15px;
+}
+
+#accordion .card-header {
+    background-color: #343a40;
+    color: white;
     text-align: center;
-    display: inline-block;
-    transition: background-color 0.3s ease;
 }
 
-.card-body .btn.bg-info {
-    background-color: #28a745;
-    color: white;
+/* Plotly Chart Styling */
+#div{{ warehouse.pincode }}, #div{{ warehouse.id }} {
+    margin-top: 15px;
+    width: 100%;
+    height: 400px;
 }
 
-.card-body .btn.bg-info:hover {
-    background-color: #218838;
+/* Scrollable Table */
+.table-responsive-lg {
+    overflow-x: auto;
 }
 
-.card-body .btn.bg-warning {
-    background-color: #ffc107;
-    color: black;
+/* Utility Classes */
+.mt-1 {
+    margin-top: 1rem !important;
 }
 
-.card-body .btn.bg-warning:hover {
-    background-color: #e0a800;
+.shadow-lg {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.card-body .btn.bg-danger {
-    background-color: #dc3545;
-    color: white;
-}
-
-.card-body .btn.bg-danger:hover {
-    background-color: #c82333;
-}
-
-/* Responsive Design */
+/* Mobile and Tablet Adjustments */
 @media (max-width: 768px) {
-    .navbar-nav {
+    .card-header .btn {
+        font-size: 0.875rem;
+    }
+
+    .container-fluidrow {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-    }
-
-    .card-body .btn {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    table th,
-    table td {
-        font-size: 0.9rem;
     }
 
     .container-fluid {
-        padding: 20px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .table-responsive-lg {
+        overflow-x: auto;
     }
 }
