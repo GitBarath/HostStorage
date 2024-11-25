@@ -1,220 +1,216 @@
-/* General Styles */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #212529;
-    margin: 0;
-    padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
 }
 
-.container-fluid {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.container-fluidrow {
-    margin-bottom: 20px;
-}
-
-h1, h5 {
-    font-weight: bold;
-}
-
-h6 {
-    font-size: 1.25rem;
-}
-
+/* Navbar Styling */
 .navbar {
-    margin-bottom: 20px;
+  background-color: #343a40;
 }
 
 .navbar-brand {
-    font-size: 1.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 
-/* Navbar Styles */
-.navbar-dark .navbar-nav .nav-link.active {
-    background-color: #17a2b8;
-    color: white;
+.navbar-toggler {
+  border-color: #ffffff;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: white;
+.navbar-toggler-icon {
+  background-color: #ffffff;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #17a2b8;
-}
-
-.offcanvas-body {
-    padding: 15px;
-}
-
-.offcanvas-header h5 {
-    font-size: 1.25rem;
+.offcanvas {
+  background-color: #343a40;
 }
 
 .offcanvas-title {
-    font-size: 1.5rem;
+  color: #ffffff;
 }
 
-/* Button Styles */
-.btn {
-    font-size: 1rem;
-    margin: 5px;
+/* Table Styling */
+table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.bg-info {
-    background-color: #17a2b8 !important;
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
-.bg-warning {
-    background-color: #ffc107 !important;
+table thead {
+  background-color: #333;
+  color: #fff;
+}
+
+table tbody tr:hover {
+  background-color: #f1f1f1;
 }
 
 .bg-danger {
-    background-color: #dc3545 !important;
+  background-color: #dc3545 !important;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.bg-info {
+  background-color: #17a2b8 !important;
 }
 
 .bg-primary {
-    background-color: #007bff !important;
+  background-color: #007bff !important;
 }
 
-.bg-dark {
-    background-color: #343a40 !important;
+/* Button Styling */
+.btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  margin: 5px;
+  transition: all 0.3s ease;
 }
 
-.table-responsive-lg {
-    overflow-x: auto;
+.btn:hover {
+  opacity: 0.8;
 }
 
-/* Table Styles */
-.table {
-    width: 100%;
-    margin-bottom: 1rem;
-    color: #212529;
+.btn.bg-info {
+  background-color: #17a2b8;
 }
 
-.table th, .table td {
-    padding: 0.75rem;
-    vertical-align: top;
+.btn.bg-warning {
+  background-color: #ffc107;
 }
 
-.table-dark {
-    background-color: #343a40;
-    color: white;
+.btn.bg-danger {
+  background-color: #dc3545;
 }
 
-.table-hover tbody tr:hover {
-    background-color: #f1f1f1;
+.btn.bg-primary {
+  background-color: #007bff;
 }
 
-.table-striped tbody tr:nth-child(odd) {
-    background-color: #f8f9fa;
-}
-
-.table-dark tbody tr:hover {
-    background-color: #495057;
-}
-
-/* Accordion Styles */
+/* Card Styling */
 .card {
-    border: none;
-    margin-bottom: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-    background-color: #343a40;
-    color: white;
-    padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 15px;
 }
 
 .card-body {
-    background-color: #f8f9fa;
+  padding: 20px;
+  background-color: #ffffff;
 }
 
 .card-header .btn {
-    cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
 }
 
-.card-body .container-fluid {
-    padding: 20px;
+.card-header .btn:hover {
+  opacity: 0.9;
 }
 
-.card-body ul.list-group {
-    padding-left: 0;
-}
-
-/* Custom Container Alignments */
-.container-fluidrow {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.container-fluidrow .col {
-    margin-bottom: 15px;
-}
-
-.container-fluidrow .col-lg-7,
-.container-fluidrow .col-lg-4 {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.container-fluid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* Accordion Styling */
 #accordion .card {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
-#accordion .card-header {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
+/* Container Styling */
+.container-fluid {
+  padding: 20px;
 }
 
-/* Plotly Chart Styling */
-#div{{ warehouse.pincode }}, #div{{ warehouse.id }} {
-    margin-top: 15px;
-    width: 100%;
-    height: 400px;
+.container-fluidrow {
+  display: flex;
+  justify-content: flex-start;
 }
 
-/* Scrollable Table */
-.table-responsive-lg {
-    overflow-x: auto;
-}
-
-/* Utility Classes */
-.mt-1 {
-    margin-top: 1rem !important;
+.col {
+  padding: 10px;
 }
 
 .shadow-lg {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Mobile and Tablet Adjustments */
+/* Table Responsive Styling */
+.table-responsive-lg {
+  overflow-x: auto;
+}
+
+/* List Group Styling */
+.list-group-item {
+  font-size: 1rem;
+  padding: 12px 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+}
+
+.list-group-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Plotly Chart Container */
+#div1, #div2 {
+  width: 100%;
+  height: 400px;
+  margin: 20px 0;
+}
+
+/* Responsive Styling */
 @media (max-width: 768px) {
-    .card-header .btn {
-        font-size: 0.875rem;
-    }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
 
-    .container-fluidrow {
-        flex-direction: column;
-        align-items: center;
-    }
+  .card-header .btn {
+    font-size: 0.9rem;
+  }
 
-    .container-fluid {
-        padding-left: 0;
-        padding-right: 0;
-    }
+  .container-fluid {
+    padding: 10px;
+  }
 
-    .table-responsive-lg {
-        overflow-x: auto;
-    }
+  .table th, .table td {
+    padding: 8px;
+  }
+
+  .col-lg-7, .col-lg-4 {
+    width: 100%;
+  }
+
+  .table-responsive-lg {
+    overflow-x: auto;
+  }
 }
