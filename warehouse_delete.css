@@ -1,0 +1,92 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Container Styles */
+  .container-lg {
+    background-color: #343a40;
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Heading Styles */
+  h1 {
+    color: #dc3545;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraph Style */
+  p {
+    font-size: 1.2rem;
+    color: #ddd;
+  }
+  
+  /* Button Styles */
+  form input[type="submit"],
+  a.btn {
+    width: 48%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  form input[type="submit"]:hover,
+  a.btn:hover {
+    cursor: pointer;
+  }
+  
+  /* Delete Button Styles */
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
+  /* Cancel Button Styles */
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .container-lg {
+      padding: 20px;
+    }
+  
+    .container {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    form input[type="submit"],
+    a.btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
